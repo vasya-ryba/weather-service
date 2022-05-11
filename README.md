@@ -39,9 +39,13 @@ Creates Kubernetes cluster in Google Cloud and deploys 2 versions of weather ser
  * `full_output_url` - URL for full output
  * `short_output_url` - URL for short output
 ##### Scripts
-#####`gke.tf`:
+
+`gke.tf`:
+
 Provision GKE Cluster with separate node pool
-#####`weather.tf`:
+
+`weather.tf`:
+
 Creates 2 deployments and services: 
  * `weather-service-1`: images `server:0.0.1` + `updater:0.0.1` for full output
  * `weather-service-2`: images `server:0.0.1` + `updater:0.0.3` for short output
