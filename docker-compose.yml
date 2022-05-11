@@ -1,0 +1,22 @@
+version: "3.9"
+
+volumes:
+  data:
+    external: false
+    name: weather_data
+
+services:
+  updater:
+    build:
+      context: updater
+      dockerfile: Dockerfile
+    volumes:
+      - data:/data/
+  server:
+    build:
+      context: server
+      dockerfile: Dockerfile
+    volumes: 
+      - data:/usr/share/nginx/html/
+    ports:
+      - "80:80"

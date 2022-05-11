@@ -1,2 +1,7 @@
-project_id = "REPLACE_ME"
-region     = "us-central1"
+project_id = ""
+region     = "europe-central2"
+zone       = "europe-central2-a"
+gke_num_nodes = 4
+repl_num = 2
+full_output_url = ""
+short_output_url = ""
